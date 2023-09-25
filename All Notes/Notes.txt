@@ -1,0 +1,358 @@
+Basics
+    'doc' then Tab
+    
+    console.log(''); // Print
+    alert(''); // Pop up
+
+    + '\n' + = next line
+
+Tags:
+ """
+ <script></script>
+ <p></p> = paragraph
+ <body></body> = page
+ <h1></h1> = header //The bigger the # the smaller the text is
+ """
+
+
+PART 2 Variables & input
+ 
+    Variables
+        var b = ''
+        //reads b
+        console.log(b);
+
+        var somenum = 45;
+        console.log(somenum);
+
+
+    Adding JAVASCRIPT code to HTML page
+            HTML page
+                <p id="someText"></p>
+        document.getElementById('someText').innerHTML = 'Hey There';
+
+
+    User input or input
+        *prompt('what is your age?' );
+            //Variables
+                var age = prompt('what is your age?' );
+             document.getElementById('someText').innerHTML = age;
+
+
+PART 3 NUMBERS
+
+    NUMBERS IN JAVASCRIPT
+        var num1 = 5;
+        float num = 6.8;
+
+
+    Multiplication
+        console.log(5*10);
+    Division   
+        console.log(5/10);
+    
+
+    Increase variable by 'an amount'
+        //variable
+        var num1 = 10;
+        //adding 1 to num1
+        num1 = num1 + 1; OR  num1++;
+        //num1 now equals
+        console.log(num1);
+        num1 = 11
+
+
+    Incroment by 1
+        var num2 = 1
+        num2++;
+        num2++;
+        num2 = 3
+    Decrement by 1
+        num--;
+        console.log(num);
+
+
+    Remainder
+        var num1 = 10
+        console.log(num1 %5);
+
+
+    Incroment by any #
+        num1 = 10
+        num1 += 10;
+        console.log(num1)
+    Decrement by any #    
+        num1 = 10
+        num1 -= 10;
+        console.log(num1)
+
+PART 4 Functions
+
+    Functions
+        function fun(){
+            alert('This is a function');
+        }
+        //call function
+        fun();
+
+
+    Complex Function
+        *takes name and says hello, 'name'
+
+        function greeting(){
+        var name = prompt("what is your name?");
+        //string next to variable
+        var result = 'Hello' + ' ' + name;
+        console.log(result);
+        }
+
+        greeting();
+
+
+    Adding Functions
+        function somenum(a, b){
+        var result = a + b;
+        console.log(result);
+        }       
+        somenum(10, 10) OR somenum('hi', ' Tod')
+        *adds numbers and strings   
+
+
+      //Example
+        function greeting(yourName) {
+            var result = 'Hello' + ' ' + yourName;
+            console.log(result);
+            }
+
+            var name = prompt('What is your name?');
+            greeting(name);
+
+PART 5 Loops
+    While Loops
+      //while 87 is less than 100 add 1 till 100
+        var num = 87;
+        while (num < 100) {
+        num += 1;
+        console.log(num);
+        }
+    
+    For Loop
+      //Same thing as ^ but simpler/better code
+            //stops at 99   //If want to stop at 100 do <= instead 
+        for (let num = 0; num < 100; num++) {
+        console.log(num);
+        }
+
+
+PART 6 Data types
+    Data Types
+        let yourage = 18;                                   //number
+        let yourname = 'Bob';                               //string
+        let name = {first: 'Jane', last: 'Doe'};            //object/dictionary 
+        let truth = false;                                  //boolean
+        let groceries = ['apple', 'banana', 'oranges'];     //aray/list
+        let random;                                         //undifined
+        let nothing = null;                                 //value null
+
+PART 7 Strings & Index
+    Strings in JAVASCRIPT(common)
+        let fruit = 'banana';
+        // \n = next line
+        let morefruits = 'banana\n apple';
+        console.log(morefruits);
+
+    Index
+        
+        //Counts the number of letters, #'s, punctuation OR overall length 
+
+         1.    console.log(fruit.length);   
+
+        //looks for things inside a string
+          //looking for the letter 'an' in fruit
+
+         2.    console.log(fruit.indexOf('an'));
+
+        //prints from one index # to another #
+
+         3.    console.log(fruit.slice(2, 6));    'banana' print = nana
+                                    ^  ^
+                            including  ^
+                                     up to
+
+        //replaces one thing with another
+
+         4. console.log(fruit.replace('ban', '123'));  
+                                    ^       ^
+                                replace     ^
+                                           with
+        
+        //make all upper case
+
+         5.     console.log(fruit.toUpperCase());
+
+        //makes all lower case
+
+         6.     console.log(fruit.toLowerCase());
+        
+        //says what index # corrosponds with number
+         7.     console.log(fruit.charAt(2));
+         //get a character
+         8.     console.log(fruit[2]);
+
+        //split a string by every character with a comma
+         9.    console.log(fruit.split(',')); 
+         //split by character
+         10.   console.log(fruit.split(' '));
+
+
+PART 8 Array: loops & common methods
+
+    Array
+        // 1st way to create an Array
+         let fruits = ['banana', 'apple', 'orange', 'mango'];
+
+        // 2nd way to create an Array
+         let fruits = new Array('banana', 'apple', 'orange', 'mango');
+
+        // Getting values from Array
+         alert(fruits[1]); OR console.log(fruits[2])
+
+        // substitute one string for another
+         fruits[0] = 'pear'; 
+    
+    Array Loop
+        //print out one item at a time on seperate lines
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i])
+        }
+
+
+    Common Array methods
+
+      let fruits = ['banana', 'apple', 'orange', 'mango'];
+      let snacks = ['granola', 'cuties', 'potatos'];
+      let allFood = fruits.concat(snacks);
+      let num = [5, 10, 3, 53, 14, 235, 692, 7]
+        //convert code to a string
+         console.log(fruits.toString(());
+
+        //print a string next to an Array that's now a string
+         console.log('i love', fruits.toString());
+        
+        //Symbole in between each Array word
+         console.log(fruits.join(' * '));
+
+        //prints the last word/string or Array
+         console.log(fruits.pop('*'));
+        //pops off the last word and returns it 
+         console.log(fruits.pop(), fruits);
+        //deletes the last word from the Array
+         console.log(fruits, fruits.pop(), fruits);
+        
+        //adds another string to the Array
+         console.log(fruits.push('blackberries'), fruits);
+
+        // adds 'new fruits' to the Array
+         console.log(fruits[3]);
+         fruits[3] = 'new fruits';
+         console.log(fruits[3]);
+
+        //removes the first element from the Array
+         fruits.shift();
+
+        // becomes and adds to the first element in the Array
+         fruits.unshift('dragonFruit');
+
+
+         //combinding fruits and snacks
+          let allFood = fruits.concat(snacks);
+
+         //cut/slice the Array from the numbers chosen
+          console.log(allFood.slice(0, 4));
+
+         // flips the allFood Array
+          console.log(allFood.reverse());
+
+
+         //puts Array in alphabetical order
+          console.log(allFood.sort());
+
+         //puts in numerical order
+          console.log(num.sort(function(a, b) {return a-b}));
+         // decending order
+          console.log(num.sort(function(a, b) {return b-a}));
+
+        // emptyArray then loop through
+         let emptyArray = new Array();
+            //as long as num is less than 10
+          for (let num = 0; num < 10; num++) {   //if want to be 1 - 10 then do <=
+              emptyArray.push(num);
+          }    
+          //will print all numbers 1 - 9
+          console.log(emptyArray);
+
+PART 9 object/dictionary
+
+    Basic object
+     let student = {first: 'Julia', last: 'Low'};
+        console.log(student.first) //print first name
+
+     //same thing but orgnized^
+      let student = {
+      first: 'Julia', 
+      last: 'Low', 
+      age: 14, 
+      height: 63
+      };
+      console.log(student.first)
+     
+     //first name next to last name ect.
+       student.first = 'notJulia'; //changes value 
+       //increase the value
+       student.age++;            //increased by 1
+       console.log(student.age);
+    
+      let student = {
+      first: 'Julia', 
+      last: 'Low', 
+      age: 14, 
+      height: 63,
+      studentInfo: function (){
+          return this.first + '\n' + this.last;
+      }
+      };
+      console.log(student.studentInfo()); //prints out first name, next line: last name
+    
+
+Part 10 If else considtionals & switch statements
+
+    Basic If Else statement
+
+     let age = prompt('What is your age? ');
+
+     if ( (age >= 18) && (age <= 35) ) {
+        status = 'target demo';
+        console.log(status);
+     } else {
+        status = 'not my auddience'
+        console.log(status);
+     }
+    
+    Switch Statement
+     
+     Example:  //day 0 --> Sunday ; day 6 --> Saturday ; day 4 --> Thursday 
+       switch (4) {
+        case 0:
+            text = 'weekend';
+            break;
+        case 6:
+            text = 'weekend';
+            break;
+        case 4:
+            text = 'weekday';
+        default:
+            text = 'weekday';
+        }
+        console.log(text);
+
+    
