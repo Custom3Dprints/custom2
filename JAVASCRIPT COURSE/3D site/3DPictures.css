@@ -282,6 +282,7 @@
     ),
     url('pic7.png');
 }
+/*
 .services__card:nth-child(8){
     background-image: linear-gradient(
         to bottom, 
@@ -289,9 +290,8 @@
         rgba(17,17,17,0.6)100%
         ),
         url('pic8.png');
-    }
-    /*
-    */
+}
+*/
 
 
 .services h2{
